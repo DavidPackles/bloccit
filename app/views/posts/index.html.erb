@@ -6,7 +6,7 @@
          <%= link_to post.title, post %>
        </h4>
        <p>
-         <%= post.body %>
+         <%= truncate(post.body, length: 30, separator: ' ' ) %>
        </p>
      </div>
    </div>
