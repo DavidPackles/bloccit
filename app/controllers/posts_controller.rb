@@ -37,4 +37,13 @@ class PostsController < ApplicationController
     end
   end
 
+  before_action :welcome_back
+
+  def welcome_back
+    if current_user 
+      flash[:notice] = "Welcome Back!"
+    end
+  end
+
+
 end

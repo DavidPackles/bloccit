@@ -12,6 +12,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 
 gem 'devise'
+gem 'figaro'
 
 gem 'bootstrap-sass', '~> 3.1.1'
 
@@ -38,4 +39,5 @@ gem 'spring',        group: :development
  
  group :development do
    gem 'sqlite3'
+
  end
