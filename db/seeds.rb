@@ -4,7 +4,8 @@
  50.times do
    Post.create!(
      title:  Faker::Lorem.sentence,
-     body:   Faker::Lorem.paragraph
+     body:   Faker::Lorem.paragraph,
+     user_id: rand(1..5)
    )
  end
  posts = Post.all
@@ -29,7 +30,6 @@
 end
 
 users = User.all
-
 
 # Why doesn't this work?
 User.first.update_attributes!(
