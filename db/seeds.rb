@@ -1,11 +1,35 @@
  require 'faker'
  
+# Create users
+5.times do
+  user = User.new(
+    name:     Faker::Name.name,
+    email:    Faker::Internet.email,
+    password: Faker::Lorem.characters(10),
+  )
+  user.skip_confirmation!
+  user.save!
+  puts "#{user.name} saved!"
+end
+
+users = User.all
+
+# Create Topics
+15.times do
+  Topic.create!(
+    name:           Faker::Lorem.sentence,
+    description:    Faker::Lorem.sentence
+    )
+end
+topics = Topic.all
+
  # Create Posts
  50.times do
    Post.create!(
-     title:  Faker::Lorem.sentence,
-     body:   Faker::Lorem.paragraph,
-     user_id: rand(1..5)
+     title:   Faker::Lorem.sentence,
+     body:    Faker::Lorem.paragraph,
+     user_id: rand(1..5),
+     topic:   topics.sample
    )
  end
  posts = Post.all
@@ -18,24 +42,34 @@
    )
  end
 
-5.times do
-  user = User.new(
-    name:     Faker::Name.name,
-    email:    Faker::Internet.email,
-    password: Faker::Lorem.characters(10)
-  )
-  user.skip_confirmation!
-  user.save!
-  puts "#{user.name} saved!"
-end
-
-users = User.all
-
-# Why doesn't this work?
-User.first.update_attributes!(
-  email: 'davidpackles@gmail.com',
-  password: 'fortnight',
-)
+ # Create an admin user
+ admin = User.new(
+   name:     'Admin User',
+   email:    'admin@example.com',
+   password: 'helloworld',
+   role:     'admin'
+ )
+ admin.skip_confirmation!
+ admin.save!
+ 
+ # Create a moderator
+ moderator = User.new(
+   name:     'Moderator User',
+   email:    'moderator@example.com', 
+   password: 'helloworld',
+   role:     'moderator'
+ )
+ moderator.skip_confirmation!
+ moderator.save!
+ 
+ # Create a member
+ member = User.new(
+   name:     'Member User',
+   email:    'member@example.com',
+   password: 'helloworld',
+ )
+ member.skip_confirmation!
+ member.save!
 
 
  puts "Seed finished"
