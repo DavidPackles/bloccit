@@ -1,7 +1,10 @@
 class Topic < ActiveRecord::Base
   has_many :posts
 
+
+
   def markdown_title
+    # DRY update - use 'render_as_markdown title' 
     renderer = Redcarpet::Render::HTML.new
     extensions = {fenced_code_blocks: true}
     redcarpet = Redcarpet::Markdown.new(renderer, extensions)
@@ -9,6 +12,7 @@ class Topic < ActiveRecord::Base
   end
 
   def markdown_description
+    # DRY update - use 'render_as_markdown description' 
     renderer = Redcarpet::Render::HTML.new
     extensions = {fenced_code_blocks: true}
     redcarpet = Redcarpet::Markdown.new(renderer, extensions)
