@@ -37,6 +37,9 @@ gem 'faker'
 ## Roles with Pundit
 gem 'pundit'
 
+# Install Simple Form
+gem 'simple_form'
+
 
 
 # bundle exec rake doc:rails generates the API under doc/api.
