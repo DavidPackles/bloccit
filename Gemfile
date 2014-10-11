@@ -28,19 +28,11 @@ gem 'bootstrap-sass', '~> 3.1.1'
 ## User authentication with Devise
 gem 'devise'
 
-## Local storage of secret variables with Figaro
 gem 'figaro'
-
-## Faker to generate seed date
 gem 'faker'
-
-## Roles with Pundit
 gem 'pundit'
-
-# Install Simple Form
 gem 'simple_form'
-
-
+gem 'redcarpet'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
