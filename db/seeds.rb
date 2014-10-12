@@ -18,7 +18,8 @@ users = User.all
 15.times do
   Topic.create!(
     name:           Faker::Lorem.sentence,
-    description:    Faker::Lorem.sentence
+    description:    Faker::Lorem.sentence,
+    user_id:        rand(1..5)
     )
 end
 topics = Topic.all

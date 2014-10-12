@@ -25,15 +25,15 @@ gem 'bootstrap-sass', '~> 3.1.1'
 
 # Other gems
 
-# User authentication
+# User authentication and authorization
 gem 'devise'
+gem 'pundit'
 
 # Secret Variables
 gem 'figaro'
 
 # Seed Data
 gem 'faker'
-gem 'pundit'
 
 # Input gems
 gem 'simple_form'
