@@ -8,9 +8,9 @@ group :production do
    gem 'rails_12factor'
  end
  
- group :development do
-   gem 'sqlite3'
- end
+group :development do
+  gem 'sqlite3'
+end
 
 # Preinstalled gems
 gem 'sass-rails', '~> 4.0.3'
@@ -25,14 +25,24 @@ gem 'bootstrap-sass', '~> 3.1.1'
 
 # Other gems
 
-## User authentication with Devise
+# User authentication
 gem 'devise'
 
+# Secret Variables
 gem 'figaro'
+
+# Seed Data
 gem 'faker'
 gem 'pundit'
+
+# Input gems
 gem 'simple_form'
 gem 'redcarpet'
+
+# Avatars
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc

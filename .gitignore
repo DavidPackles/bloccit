@@ -19,4 +19,4 @@
 /config/application.yml
 
 # ignore cookie secret token
-config/initializers/secret_token.rb
+config/initializers/secrets.yml
