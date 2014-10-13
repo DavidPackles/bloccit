@@ -1,4 +1,5 @@
 class TopicsController < ApplicationController
+  
   def index
     @topics = Topic.all
     authorize @topics
@@ -47,7 +48,7 @@ class TopicsController < ApplicationController
   private
 
   def topic_params
-    params.require(:topic).permit(:name, :description, :public)
+    params.require(:topic).permit(:name, :description, :public, :image)
   end
 
 end

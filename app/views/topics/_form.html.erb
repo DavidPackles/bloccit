@@ -1,0 +1,39 @@
+<%= simple_form_for [topic] do |f| %>
+
+<div class ="form-group">
+  <%= f.input :name, placeholder: 'Enter Topic Title', input_html: {class: 'form-control'}, error_html: { class: 'has-error'}%>
+</div>
+
+<div class ="form-group">
+  <%= f.input :description, placeholder: 'Enter description', input_html: {class: 'form-control'}, error_html: { class: 'form-group has-error'} %>
+</div>
+
+<div class="form-group">
+  <% f.input :public %>
+</div>
+
+<div class ="form-group">
+    <%= f.label :public, class: 'checkbox' do %>
+      <%= f.check_box :public %> Public topic
+    <% end %>
+</div>
+
+<div class ="form-group">
+  <%= f.button :submit, 'Save', class: 'btn btn-success' %>
+</div>
+
+<% if @topic.image? %>
+  <div class="form-group"> 
+    <p>Topic Image</p>
+    <%= image_tag( @topic.image.full.url) %>
+  </div>
+<% end %>
+
+<div class="form-group">
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+  <%= f.hidden_field :image_cache %>
+</div>
+
+
+<% end %>

@@ -2,6 +2,7 @@ class Topic < ActiveRecord::Base
   has_many :posts
   belongs_to :user
 
+  mount_uploader :image, ImageUploader
 
   def markdown_title
     # DRY update - use 'render_as_markdown title' 

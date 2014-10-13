@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class AvatarUploader < CarrierWave::Uploader::Base
+class ImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
@@ -23,7 +23,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   #   # For Rails 3.1+ asset pipeline compatibility:
   #   # ActionController::Base.helpers.asset_path("fallback/" + [version_name, "default.png"].compact.join('_'))
   #
-  #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
+  #   "/images/f.allback/" + [version_name, "default.png"].compact.join('_')
   # end
 
   # Process files as they are uploaded:
@@ -34,10 +34,13 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
-   version :thumb do
-     process :resize_to_fit => [50, 50]
+   version :full do
+      process :resize_to_fit => [300, 300]
    end
-   
+
+   version :thumb do
+      process :resize_to_fit => [50, 50]
+   end
    version :tiny do
      process resize_to_fill: [20, 20]
    end
