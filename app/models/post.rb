@@ -16,17 +16,20 @@ class Post < ActiveRecord::Base
   mount_uploader :image, PostimageUploader
 
   def markdown_title
-    renderer = Redcarpet::Render::HTML.new
-    extensions = {fenced_code_blocks: true}
-    redcarpet = Redcarpet::Markdown.new(renderer, extensions)
-    (redcarpet.render self.title).html_safe
+    render_markdown(self.title)
   end
 
   def markdown_body
+    render_markdown(self.body)
+  end
+
+  protected
+
+  def render_markdown(element)
     renderer = Redcarpet::Render::HTML.new
     extensions = {fenced_code_blocks: true}
     redcarpet = Redcarpet::Markdown.new(renderer, extensions)
-    (redcarpet.render self.body).html_safe
+    redcarpet.render(element).html_safe
   end
 
 end

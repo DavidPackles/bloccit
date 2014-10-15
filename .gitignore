@@ -20,3 +20,6 @@
 
 # ignore cookie secret token
 config/initializers/secrets.yml
+
+# Carrierwave image
+public/uploads
