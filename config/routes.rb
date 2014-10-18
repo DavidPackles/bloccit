@@ -1,13 +1,19 @@
 Blocit::Application.routes.draw do
 
+  get 'comments/create'
+
   devise_for :users
 
   resources :topics do
     resources :posts, except: [:index]
+  
+    resources :posts do
+     resources :comments, only: [:create]
+    end
+
   end
 
   get 'about' => 'welcome#about'
-  get 'me' => 'welcome#me'
 
   root to: 'welcome#index'
 
