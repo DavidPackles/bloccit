@@ -50,5 +50,8 @@ class ApplicationPolicy
       scope
     end
   end
+
+  private
+
 end
 

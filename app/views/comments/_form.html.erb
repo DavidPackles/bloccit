@@ -1,4 +1,4 @@
-<%= simple_form_for [@topic, post, post.comments.new] do |f| %>
+<%= simple_form_for [post, post.comments.new] do |f| %>
 
 <div class ="form-group">
   <%= f.input :body, label: "Your Comment", placeholder: 'What are your thoughts?', input_html: {class: 'form-control'}, error_html: { class: 'form-group has-error'} %>
