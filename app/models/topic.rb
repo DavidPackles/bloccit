@@ -1,6 +1,7 @@
 class Topic < ActiveRecord::Base
-  has_many :posts
+  has_many :posts, dependent: :destroy
   belongs_to :user
+  
 
   mount_uploader :image, ImageUploader
 

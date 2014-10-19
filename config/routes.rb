@@ -8,7 +8,7 @@ Blocit::Application.routes.draw do
     resources :posts, except: [:index]
   
     resources :posts do
-     resources :comments, only: [:create]
+     resources :comments, only: [:create, :destroy]
     end
 
   end

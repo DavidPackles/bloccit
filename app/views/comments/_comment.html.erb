@@ -1,12 +1,16 @@
-<% @post.comments.each do |comment| %>
   <div class="media">
+
   <div class="avater" style ="float:left; margin-right:5px">
-    <%= image_tag(comment.user.avatar.tiny.url) if comment.user.avatar? %>
+    <%= link_to '#', class: 'pull-left' do %>
+      <%= image_tag(comment.user.avatar.tiny.url) if comment.user.avatar? %>
+    <% end %>
   </div> 
     <div class="media-body">
-      <h4 class="media-heading"><%= comment.user.name %></h4>
+      <small><%= comment.user.name %> commented <%= time_ago_in_words(comment.created_at) %> ago
+        <% if policy(comment).destroy? %>
+          <%= link_to "Delete", [@topic, @post, comment], method: :delete %>
+        <% end %>
+      </small>
       <p><%= comment.body %></p>
-      <small>submitted <%= time_ago_in_words(comment.created_at) %> ago</small>
     </div>
   </div>
-<% end %>
