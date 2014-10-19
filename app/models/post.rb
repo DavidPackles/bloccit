@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
   belongs_to :user
   belongs_to :topic
 
-
+  include DavePaginator
 
   default_scope { order('created_at DESC') }
 
@@ -14,6 +14,7 @@ class Post < ActiveRecord::Base
   validates :user, presence: true
 
   mount_uploader :image, ImageUploader
+
 
   def markdown_title
     render_markdown(self.title)

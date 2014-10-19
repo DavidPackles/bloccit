@@ -14,4 +14,8 @@ class User < ActiveRecord::Base
     role == base_role.to_s
   end
 
+  def admin?
+    self.user.role?(:admin)
+  end
+
 end
