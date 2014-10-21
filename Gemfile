@@ -15,6 +15,10 @@ group :development do
   gem 'pry-rails'
 end
 
+group :test do
+  gem 'rspec-rails', '~> 3.1.0'
+end
+
 # Preinstalled gems
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
