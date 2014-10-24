@@ -7,6 +7,7 @@
         expect Vote.new(value: 1).valid?.to eq true
         expect Vote.new(value: -1).valid?.to eq true
         expect Vote.new(value: 2).valid?.to eq false
+        expect Vote.new(value: -2).valid?.to eq false        
       end
     end
   end
