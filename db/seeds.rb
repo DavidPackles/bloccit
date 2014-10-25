@@ -26,14 +26,27 @@ topics = Topic.all
 
  # Create Posts
  200.times do
-   Post.create!(
+   post = Post.create!(
      title:   Faker::Lorem.sentence,
      body:    Faker::Lorem.paragraph,
      user_id: rand(1..10),
      topic:   topics.sample
    )
+   post.update_attributes!(created_at: rand(10.minutes .. 1.year).ago)
+   post.update_rank
  end
  posts = Post.all
+
+ 
+ # Create Votes
+500.times do
+   Vote.create!(
+     value: 1,
+     user_id: rand(1..10),
+     post_id: rand(1..200),
+   )
+ end
+
  
  # Create Comments
 500.times do

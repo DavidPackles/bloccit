@@ -6,6 +6,7 @@
 
 <div class="row">
   <div class="col-md-8">
+
     <div class="post-image">
       <%= image_tag(@topic.image.full.url) if @topic.image? %>
     </div> 
@@ -14,6 +15,7 @@
 
     <% @posts.each do |post| %>
       <div class="media">
+        <%= render partial: 'votes/voter', locals: { post: post } %>
         <div class="media-body">
           <h4 class="media-heading">
           <%= link_to (post.markdown_title), [@topic, post] %></h4>
