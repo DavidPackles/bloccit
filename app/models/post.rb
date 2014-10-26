@@ -5,8 +5,6 @@ class Post < ActiveRecord::Base
   belongs_to :user
   belongs_to :topic
 
-  include DavePaginator
-
   default_scope { order('rank DESC') }
 
   validates :title, length: { minimum: 5}, presence: true
@@ -41,6 +39,13 @@ class Post < ActiveRecord::Base
     new_rank = points + age
 
     update_attribute(:rank, new_rank)
+  end
+
+  def save_with_initial_vote
+    ActiveRecord::Base.transaction do 
+      self.create_vote
+      self.save
+    end
   end
 
   def create_vote
