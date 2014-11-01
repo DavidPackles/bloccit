@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  
+
   has_many :comments, dependent: :destroy
   has_many :votes, dependent: :destroy
   has_many :favorites, dependent: :destroy
@@ -7,6 +7,7 @@ class Post < ActiveRecord::Base
   belongs_to :topic
 
   default_scope { order('rank DESC') }
+  scope :visible_to, -> (user) { user ? all : joins(:topic).where('topics.public' => true) }
 
   validates :title, length: { minimum: 5}, presence: true
   validates :body, length: {minimum: 20}, presence: true
@@ -43,7 +44,7 @@ class Post < ActiveRecord::Base
   end
 
   def save_with_initial_vote
-    ActiveRecord::Base.transaction do 
+    ActiveRecord::Base.transaction do
       self.create_vote
       self.save
     end
