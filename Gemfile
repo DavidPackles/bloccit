@@ -6,6 +6,7 @@ gem 'rails', '4.1.5'
 group :production do
    gem 'pg'
    gem 'rails_12factor'
+   gem 'unicorn'
  end
 
 group :development do
@@ -13,7 +14,6 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'pry-rails'
-  gem 'capybara'
 end
 
 group :test do
