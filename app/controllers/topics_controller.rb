@@ -12,8 +12,8 @@ class TopicsController < ApplicationController
 
   def show
     @topic = Topic.find(params[:id])
-    @posts = @topic.posts.paginate(page: params[:page], per_page: 5)
     authorize @topic
+    @posts = @topic.posts.includes(:user).includes(:comments).paginate(page: params[:page], per_page: 5)
   end
 
   def edit
@@ -24,7 +24,7 @@ class TopicsController < ApplicationController
   def create
     @topic = Topic.new(topic_params)
     authorize @topic
-    
+
     if @topic.save
       redirect_to @topic, notice: "Topic was saved successfully!"
     else

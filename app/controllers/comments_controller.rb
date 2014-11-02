@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
-  
+
   def create
-    
+
     @post = Post.find(params[:post_id])
     @topic = @post.topic
     @comments = @post.comments

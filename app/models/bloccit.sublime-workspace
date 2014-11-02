@@ -1,0 +1,255 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"topi",
+				"topics_path"
+			],
+			[
+				"Applica",
+				"ApplicationController"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 117.0,
+		"selected_items":
+		[
+			[
+				"project",
+				"Project: Save As"
+			],
+			[
+				"markdowned",
+				"Preferences: MarkdownEditing Settings – User"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"prv ",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"prv",
+				"PackageResourceViewer: Extract Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"insall",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 507.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/davidpackles/code/bloccit",
+		"/Users/davidpackles/code/bloccit/app",
+		"/Users/davidpackles/code/bloccit/app/assets",
+		"/Users/davidpackles/code/bloccit/app/assets/stylesheets",
+		"/Users/davidpackles/code/bloccit/app/controllers",
+		"/Users/davidpackles/code/bloccit/app/controllers/concerns",
+		"/Users/davidpackles/code/bloccit/app/controllers/topics",
+		"/Users/davidpackles/code/bloccit/app/models",
+		"/Users/davidpackles/code/bloccit/app/models/concerns",
+		"/Users/davidpackles/code/bloccit/app/views",
+		"/Users/davidpackles/code/bloccit/app/views/layouts",
+		"/Users/davidpackles/code/bloccit/app/views/posts",
+		"/Users/davidpackles/code/bloccit/app/views/topics",
+		"/Users/davidpackles/code/bloccit/app/views/topics/posts"
+	],
+	"file_history":
+	[
+		"/Users/davidpackles/code/bloccit/app/models/user.rb",
+		"/Users/davidpackles/code/bloccit/spec/models/user_spec.rb",
+		"/Users/davidpackles/code/bloccit/app/views/topics/posts/show.html.erb",
+		"/Users/davidpackles/code/bloccit/app/views/posts/index.html.erb",
+		"/Users/davidpackles/code/bloccit/app/views/layouts/application.html.erb",
+		"/Users/davidpackles/code/bloccit/config/routes.rb",
+		"/Users/davidpackles/code/bloccit/app/controllers/users_controller.rb",
+		"/Users/davidpackles/code/bloccit/app/controllers/topics/posts_controller.rb",
+		"/Users/davidpackles/code/bloccit/app/controllers/posts_controller.rb",
+		"/Users/davidpackles/code/bloccit/config/initializers/inflections.rb",
+		"/Users/davidpackles/Library/Application Support/Sublime Text 3/Packages/User/Markdown.sublime-settings",
+		"/Users/davidpackles/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/Markdown (Standard).sublime-settings",
+		"/Users/davidpackles/code/bloccit/app/views/topics/posts/edit.html.erb",
+		"/Users/davidpackles/code/bloccit/app/views/comments/_comment.html.erb",
+		"/Users/davidpackles/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/davidpackles/code/bloccit/app/models/post.rb",
+		"/Users/davidpackles/code/bloccit/app/views/posts/edit.html.erb",
+		"/Users/davidpackles/code/bloccit/app/assets/javascripts/application.js",
+		"/Users/davidpackles/code/bloccit/app/views/users/show.html.erb",
+		"/Users/davidpackles/code/bloccit/app/views/posts/_post.html.erb",
+		"/Users/davidpackles/code/bloccit/app/views/topics/show.html.erb",
+		"/Users/davidpackles/code/bloccit/app/views/devise/registrations/edit.html.erb",
+		"/Users/davidpackles/Library/Application Support/Sublime Text 3/Packages/User/Distraction Free.sublime-settings",
+		"/Users/davidpackles/Library/Application Support/Sublime Text 3/Packages/User/BeautifyRuby.sublime-settings",
+		"/Users/davidpackles/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/davidpackles/code/bloccit/app/views/posts/show.html.erb",
+		"/Users/davidpackles/code/bloccit/app/controllers/favorites_controller.rb",
+		"/Users/davidpackles/code/bloccit/app/_tempform.html.erb",
+		"/Users/davidpackles/code/bloccit/app/controllers/application_controller.rb"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"folder"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "bloccit.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"user",
+				"app/models/user.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 203.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
