@@ -7,7 +7,7 @@ group :production do
    gem 'pg'
    gem 'rails_12factor'
  end
- 
+
 group :development do
   gem 'sqlite3'
   gem 'better_errors'
@@ -55,6 +55,9 @@ gem 'fog'
 
 # Pagination
 gem 'will_paginate', '~> 3.0.5'
+
+# Performance monitoring
+gem 'newrelic_rpm'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
