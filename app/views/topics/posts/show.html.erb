@@ -16,16 +16,15 @@
 
     <p><%= @post.markdown_body %></p>
 
-    <% @post.comments.each do |comment| %>
-      <%= render partial: 'comments/comment', collection:@comments %>
-    <% end %>
-
-    <% if current_user %>
-      <%= render partial: 'comments/form', locals: { topic: @topic, post: @post, comment: @comment } %>
-    <% else %>
+    <h2>Comments</h2>
+    <div class='js-comments'>
+      <%= render partial: 'comments/comment', collection: @comments %>
+    </div>
+    <div class='new-comment'>
+      <%= render 'comments/form' %>
+    </div>
 
     <div style="margin-left:20px; margin-top:10px"><%= link_to "Sign Up!", new_user_registration_path %> to make comments.</div>
-    <% end %>
 
   </div>
 
